@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Techies Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #a3c4f3, #d0e7f9);
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .gallery-container {
+      background: linear-gradient(135deg, #a3c4f3, #d0e7f9); /* Match the theme's gradient */
+      padding: 40px 60px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1200px; /* Increase width */
+    }
+
+    .gallery-container h2 {
+      margin-bottom: 10px;
+      color: #1f78d1;
+      font-weight: bold;
+      font-size: 36px; /* Increase font size */
+      text-align: center;
+    }
+
+    .gallery-container p {
+      color: #555;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for video iframe */
+    .video-thumbnail {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .video-thumbnail iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-thumbnail:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gallery-container">
+    <h2>Techy Stuffs</h2>
+    <p>Explore photos and videos to inspire you!</p>
+    <div class="gallery-grid">
+      <!-- Photo Images -->
+      <img src="images/photo1.jpg" alt="Gallery Image">
+      <img src="images/photo2.jpg" alt="Gallery Image">
+      <img src="images/photo3.jpg" alt="Gallery Image">
+      <img src="images/photo4.jpg" alt="Gallery Image">
+
+      <!-- Video Thumbnails with Autoplay and Embedded -->
+      <div class="video-thumbnail">
+        <iframe src="https://www.youtube.com/embed/B-ytMSuwbf8?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="video-thumbnail">
+        <iframe src="https://www.youtube.com/embed/kdJJLVjcyJI?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="video-thumbnail">
+        <iframe src="https://www.youtube.com/embed/kX3TfdUqpuU?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="video-thumbnail">
+        <iframe src="https://www.youtube.com/embed/8_eMgS6UszY?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

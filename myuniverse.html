@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Universe</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #89CFF0, #A7C7E7);
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: #1f78d1;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: white;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 40px;
+            max-width: 800px;
+            line-height: 1.6;
+            font-weight: 300;
+            background-color: rgba(0, 29, 69, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .game-card {
+            background-color: #2b2b2b;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            text-decoration: none; /* Remove link styling from entire card */
+            color: inherit;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #1f78d1;
+        }
+
+        .game-card .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .game-card h3 a {
+            color: #1f78d1;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .game-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .game-card p {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Techy Universe</h1>
+        <p>Explore top coding-related games and challenges that boost your programming skills</p>
+    </header>
+
+    <div class="intro">
+        <p>Coding can be a fun and rewarding challenge! These games and platforms help you enhance your coding abilities, whether you're a beginner or an expert. Dive into various coding challenges, puzzles, and even build your own projects while having fun!</p>
+    </div>
+
+    <div class="games-grid">
+
+        <div class="game-card">
+            <img src="images/codeCombat.jpg" alt="CodeCombat">
+            <div class="content">
+                <h3><a href="https://codecombat.com/" target="_blank">CodeCombat</a></h3>
+                <p>Learn coding through a game-like environment. Solve puzzles using real code to progress.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="images/hackerRank.jpg" alt="HackerRank">
+            <div class="content">
+                <h3><a href="https://www.hackerrank.com/" target="_blank">HackerRank</a></h3>
+                <p>Challenge yourself with coding problems and improve your skills in various languages.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="images/codeWars.jpg" alt="Codewars">
+            <div class="content">
+                <h3><a href="https://www.codewars.com/" target="_blank">Codewars</a></h3>
+                <p>Solve code challenges (kata) to advance in rank and sharpen your programming skills.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="images/euler.jpg" alt="Project Euler">
+            <div class="content">
+                <h3><a href="https://projecteuler.net/" target="_blank">Project Euler</a></h3>
+                <p>Engage with mathematical and computational problems to solve using programming.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

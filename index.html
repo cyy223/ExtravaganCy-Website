@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ExtravaganCy Website</title>
+	  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    alert("Welcome to ExtravaganCy Techy Website!");
+  });
+</script>
+	<style>
+		:root {
+			--primary: #338cd0;
+			--secondary: #62a0cf;
+			--background: #f4f4f4;
+			--text-color: white;
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box; /* Ensure padding/border don't cause overflow */
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			margin: 0;
+			padding: 0;
+			background-color: var(--background);
+		}
+
+		/* Header */
+		header {
+			background: var(--primary);
+			color: var(--text-color);
+			padding: 1rem;
+			text-align: center;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+		}
+
+		/* Navigation */
+		nav {
+			background: var(--secondary);
+			padding: 0.5rem;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			flex-wrap: wrap;
+		}
+
+		nav a {
+			color: var(--text-color);
+			text-decoration: none;
+			font-size: 18px;
+			padding: 10px;
+		}
+
+		/* Main Content */
+		main {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0;
+			gap: 20px;
+			position: relative;
+			padding: 0 20px; /* Added padding to maintain consistent gap */
+			width: 100%;
+			max-width: 100%; /* Ensure the main content doesn't overflow */
+		}
+
+		/* Section */
+		section {
+			flex: 2;
+			padding: 20px;
+			background: white;
+			border-radius: 5px;
+			position: relative;
+		}
+
+		/* Aside */
+		aside {
+			flex: 1;
+			padding: 20px;
+			background: white;
+			border-radius: 5px;
+			position: relative;
+		}
+
+		/* Articles */
+		article {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 20px;
+		}
+
+		/* Footer */
+		footer {
+			background: var(--secondary);
+			color: var(--text-color);
+			text-align: center;
+			padding: 1rem;
+			margin-top: 20px;
+			position: relative; /* Changed from fixed to relative */
+			width: 100%;
+		}
+
+		/* Links */
+		a {
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			padding: 5px;
+		}
+
+		a:link {
+			color: blue;
+		}
+
+		a:visited {
+			color: purple;
+		}
+
+		a:hover {
+			color: red;
+			text-decoration: underline;
+		}
+
+		a:focus {
+			outline: 2px dashed orange;
+		}
+
+		a:active {
+			color: green;
+		}
+
+		/* RESPONSIVE DESIGN */
+		@media (max-width: 768px) {
+			nav {
+				flex-direction: column;
+			}
+			nav a {
+				display: block;
+				padding: 10px;
+			}
+
+			main {
+				flex-direction: column;
+				margin: 10px;
+				padding: 0; /* Remove side padding in smaller screens */
+			}
+
+			section, aside {
+				flex: 1;
+				width: 100%;
+				margin: 0;
+			}
+
+			footer {
+				position: relative; /* Ensures footer stays at the bottom */
+				margin-top: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>ExtravaganCy Knowledge</h1>
+		<p>Sharing knowledge about Web Design, HTML5, CSS, and JavaScript</p>
+	</header>
+
+	<nav>
+		<a href="./index.html">Home</a>
+		<a href="./aboutus.html">About Us</a>
+		<a href="./gallery.html">Gallery</a>
+		<a href="./contactUs.html">Contact Us</a>
+		<a href="./myuniverse.html">My Universe</a>
+		<a href="./Dashboard.html">Dashboard</a>
+	</nav>
+
+	<main>
+		<section>
+			<h2>Learn About HTML & CSS</h2>
+			<article>
+				<h3>Understanding HTML5 Semantics</h3>
+				<p>HTML5 introduced new semantic elements that help define the structure of web pages...</p>
+				<a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Read More</a>
+			</article>
+
+			<article>
+				<h3>CSS Flexbox: A Beginner's Guide</h3>
+				<p>Flexbox is a powerful tool for creating responsive layouts with minimal code...</p>
+				<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Read More</a>
+			</article>
+		</section>
+
+		<aside>
+			<h2>What's New?</h2>
+			<p>We've recently revamped the site with fresh content and new tutorials! Whether you're a beginner or an experienced web designer, our updated resources on 
+			HTML5, CSS, and JavaScript will help you stay on top of the latest trends and best practices in web development.</p>
+
+			<h3>Popular Topics</h3>
+			<ul>
+				<li><a href="https://www.w3schools.com/html/html_css.asp">HTML & CSS Basics</a></li>
+				<li><a href="https://www.w3schools.com/Js/">JavaScript Fundamentals</a></li>
+				<li><a href="https://www.w3schools.com/html/html_responsive.asp">Responsive Web Design</a></li>
+				<li><a href="https://www.w3schools.com/html/html_symbols.asp">HTML Symbols</a></li>
+			</ul>
+		</aside>
+	</main>
+
+	<footer>
+		<p>&copy; 2024 My Website. All rights reserved.</p>
+	</footer>
+</body>
+</html>
