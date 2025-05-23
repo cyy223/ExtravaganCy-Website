@@ -105,10 +105,10 @@
 
   <div class="contact-wrapper">
     <h2>Get in touch</h2>
-    <input type="text" placeholder="Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="4" placeholder="Your Message" required></textarea>
-    <button type="submit">Submit →</button>
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit" onclick="submitForm()">Submit →</button>
 
     <div class="map-section">
       <h3>How to Get Here</h3>
@@ -124,5 +124,33 @@
     </div>
   </div>
 
+  <script>
+    function submitForm() {
+      // Get input values
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Validate fields are not empty
+      if (!name || !email || !message) {
+        alert("Please fill in all the fields.");
+        return;
+      }
+
+      // Show confirmation dialog
+      const isConfirmed = confirm(
+        `Please confirm your message:\n\nUsername: ${name}\nEmail: ${email}\nMessage: ${message}\n\nAre you sure you want to send this message?`
+      );
+
+      // If the user confirms, show thank-you message
+      if (isConfirmed) {
+        alert(`Thank you for submitting your response, ${name}. We appreciate you taking the time to get in touch with us!`);
+        // You can also clear the form fields after submission if needed
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+      }
+    }
+  </script>
 </body>
 </html>
