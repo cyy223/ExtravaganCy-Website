@@ -4,17 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ExtravaganCy Website</title>
-	  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    alert("Welcome to ExtravaganCy Techy Website!");
-  });
-</script>
 	<style>
 		:root {
 			--primary: #338cd0;
 			--secondary: #62a0cf;
 			--background: #f4f4f4;
 			--text-color: white;
+			--alert-bg: #89CFF0;
+			--alert-shadow: rgba(0, 0, 0, 0.3);
 		}
 
 		*,
@@ -137,6 +134,50 @@
 			color: green;
 		}
 
+		/* Custom Alert Modal */
+		#custom-alert {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: var(--alert-bg);
+			color: var(--text-color);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 10px 30px var(--alert-shadow);
+			text-align: center;
+			z-index: 2000;
+			display: none; /* Hidden by default */
+		}
+
+		#custom-alert button {
+			margin-top: 10px;
+			padding: 10px 20px;
+			background: var(--primary);
+			border: none;
+			border-radius: 5px;
+			color: var(--text-color);
+			font-size: 16px;
+			cursor: pointer;
+			transition: background 0.3s;
+		}
+
+		#custom-alert button:hover {
+			background: var(--secondary);
+		}
+
+		/* Overlay */
+		#overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			z-index: 1999;
+			display: none; /* Hidden by default */
+		}
+
 		/* RESPONSIVE DESIGN */
 		@media (max-width: 768px) {
 			nav {
@@ -167,6 +208,12 @@
 	</style>
 </head>
 <body>
+	<div id="overlay"></div>
+	<div id="custom-alert">
+		<p>Welcome to ExtravaganCy Techy Website!</p>
+		<button id="close-alert">OK</button>
+	</div>
+
 	<header>
 		<h1>ExtravaganCy Knowledge</h1>
 		<p>Sharing knowledge about Web Design, HTML5, CSS, and JavaScript</p>
@@ -215,5 +262,25 @@
 	<footer>
 		<p>&copy; 2024 My Website. All rights reserved.</p>
 	</footer>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			if (!sessionStorage.getItem("welcomeShown")) {
+				const overlay = document.getElementById("overlay");
+				const alertBox = document.getElementById("custom-alert");
+				const closeAlert = document.getElementById("close-alert");
+
+				// Show the overlay and modal
+				overlay.style.display = "block";
+				alertBox.style.display = "block";
+
+				// Close the modal
+				closeAlert.addEventListener("click", function () {
+					overlay.style.display = "none";
+					alertBox.style.display = "none";
+					sessionStorage.setItem("welcomeShown", "true");
+				});
+			}
+		});
+	</script>
 </body>
 </html>
